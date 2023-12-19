@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Affichage Interaction</string>
   </property>
   <widget class="QWidget" name="verticalLayoutWidget_2">
    <property name="geometry">

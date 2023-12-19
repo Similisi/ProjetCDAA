@@ -4,6 +4,8 @@
 #include <QWidget>
 #include "gestioninteraction.h"
 #include "gestionnairecontact.h"
+#include "gestionhistorique.h"
+#include <QDebug>
 namespace Ui {
 class AffHisto;
 }

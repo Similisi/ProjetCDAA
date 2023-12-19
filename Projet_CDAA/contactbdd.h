@@ -12,8 +12,10 @@ class ContactBDD
 public:
     ContactBDD();
     void AddContact(Contact *);
-    void ModifierContact(Contact*,Contact*);
+    void ModifierContact(QString anciennom,QString ancienprenom,Contact*);
     std::list<Contact> SelectAllContact();
+    int getLastId();
+    int getidContact(Contact *c );
 private:
     QSqlDatabase db;
 };

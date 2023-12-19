@@ -2,6 +2,13 @@
 #define ADDCONTACT_H
 
 #include <QDialog>
+#include <QMessageBox>
+#include <QDebug>
+#include <QDate>
+#include "contact.h"
+#include "date.h"
+#include "gestionnairecontact.h"
+#include "contactbdd.h"
 namespace Ui {
 class AddContact;
 }

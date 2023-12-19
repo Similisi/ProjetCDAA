@@ -13,18 +13,23 @@ SOURCES += \
     addinteraction.cpp \
     affhisto.cpp \
     affichageinteraction.cpp \
+    cherchercontact.cpp \
     contact.cpp \
     contactbdd.cpp \
     contactinteraction.cpp \
+    gestionhistorique.cpp \
     gestioninteraction.cpp \
     gestionnairecontact.cpp \
     gestiontache.cpp \
     historique.cpp \
+    historiquebdd.cpp \
     interaction.cpp \
     interactionbdd.cpp \
+    lancementbdd.cpp \
     main.cpp \
     mainwindow.cpp \
     modificationcontact.cpp \
+    resultatcontact.cpp \
     tache.cpp
 
 HEADERS += \
@@ -32,18 +37,23 @@ HEADERS += \
     addinteraction.h \
     affhisto.h \
     affichageinteraction.h \
+    cherchercontact.h \
     contact.h \
     contactbdd.h \
     contactinteraction.h \
     date.h \
+    gestionhistorique.h \
     gestioninteraction.h \
     gestionnairecontact.h \
     gestiontache.h \
     historique.h \
+    historiquebdd.h \
     interaction.h \
     interactionbdd.h \
+    lancementbdd.h \
     mainwindow.h \
     modificationcontact.h \
+    resultatcontact.h \
     tache.h
 
 FORMS += \
@@ -51,8 +61,10 @@ FORMS += \
     addinteraction.ui \
     affhisto.ui \
     affichageinteraction.ui \
+    cherchercontact.ui \
     mainwindow.ui \
-    modificationcontact.ui
+    modificationcontact.ui \
+    resultatcontact.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -25,6 +25,7 @@ void GestionnaireContact::addContact(const Contact* c){
     d->annee = datejour.year();
     Historique *historique = new Historique("Ajout contact : "+c->getNom(),*d);
     this->listeHistorique.push_back(*historique);
+
 }
 void GestionnaireContact::modificationContact(const std::string nom,const std::string prenom, Contact* contact,Date date){
     auto it = this->listeContact.begin();
@@ -73,4 +74,5 @@ std::list<Contact> GestionnaireContact::getListeContact(){
 std::list<Historique> GestionnaireContact::getListeHistorique(){
     return this->listeHistorique;
 }
+
 

@@ -1,6 +1,6 @@
 #include "affhisto.h"
 #include "ui_affhisto.h"
-#include <QDebug>
+
 
 AffHisto::AffHisto(QWidget *parent) :
     QWidget(parent),
@@ -26,6 +26,12 @@ void AffHisto::MajHisto(){
     for(auto c : gc.GetInstance()->getListeHistorique()){
         qDebug()<< QString::fromStdString(c.getAction());
         QListWidgetItem* li = new QListWidgetItem(QString::fromStdString(c.getAction()));
+        ui->list_histo->addItem(li);
+    }
+    GestionHistorique gh;
+    for(auto h : gh.GetInstance()->getListeHistorique()){
+        qDebug()<< QString::fromStdString(h.getAction());
+        QListWidgetItem* li = new QListWidgetItem(QString::fromStdString(h.getAction()));
         ui->list_histo->addItem(li);
     }
 }

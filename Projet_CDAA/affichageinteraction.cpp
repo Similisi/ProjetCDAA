@@ -1,6 +1,6 @@
 #include "affichageinteraction.h"
 #include "ui_affichageinteraction.h"
-#include <QDebug>
+
 
 AffichageInteraction::AffichageInteraction(QWidget *parent) :
     QWidget(parent),

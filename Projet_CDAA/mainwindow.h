@@ -9,6 +9,7 @@
 #include "gestionnairecontact.h"
 #include "affichageinteraction.h"
 #include "affhisto.h"
+#include "cherchercontact.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -35,11 +36,22 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_actionChercher_contact_triggered();
+
+    void on_pushButton_4_clicked();
+
+    void majListeDebut();
+
+    void on_Chercher_btn_clicked();
+
+    void on_actionExport_JSON_triggered();
+
 private:
     Ui::MainWindow *ui;
     AddContact *ad;
     ModificationContact *mc;
     AddInteraction *ai;
     AffichageInteraction *Affi;
+    ChercherContact *cc;
 };
 #endif // MAINWINDOW_H

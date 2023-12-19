@@ -3,6 +3,7 @@
 #include <QMessageBox>
 #include <QDebug>
 #include "gestionnairecontact.h"
+#include "contactbdd.h"
 ModificationContact::ModificationContact(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ModificationContact)
@@ -26,13 +27,14 @@ void ModificationContact::ModifContact(Contact * c){
     ui->PhotoEdit->setText(QString::fromStdString(c->getPhoto()));
     QDate* date = new QDate();
     date->setDate(c->getDateCreation().annee,c->getDateCreation().mois,c->getDateCreation().jour);
+    ui->dateEdit->setDate(*date);
     this->close();
 }
 
 
 void ModificationContact::on_AnnulerBTN_clicked()
 {
-
+    this->close();
 
 }
 
@@ -69,6 +71,8 @@ void ModificationContact::on_ModifBTN_clicked()
         }
     }
     emit ModifCont();
+    ContactBDD* cb = new ContactBDD();
+    cb->ModifierContact(QString::fromStdString(this->ancienNom),QString::fromStdString(this->ancienPrenom),c);
     this->close();
     }
 

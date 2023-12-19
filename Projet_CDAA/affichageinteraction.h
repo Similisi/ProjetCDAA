@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "interaction.h"
+#include <QDebug>
 
 namespace Ui {
 class AffichageInteraction;

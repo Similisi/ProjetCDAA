@@ -6,12 +6,14 @@
 #include <QDebug>
 #include <QtSql/QSqlQuery>
 #include "interaction.h"
+#include "contact.h"
+#include "contactbdd.h"
 
 class InteractionBdd
 {
 public:
     InteractionBdd();
-    void AddInteraction(Interaction *);
+    void AddInteraction(Interaction *,Contact*);
     void ModifierInteraction(Interaction*,Interaction*);
     std::list<Interaction> SelectAllInteraction();
 private:

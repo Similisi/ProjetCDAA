@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Gestion Contact</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="horizontalLayoutWidget_3">
@@ -141,7 +141,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="historique_btn">
     <property name="geometry">
      <rect>
       <x>380</x>
@@ -151,7 +151,33 @@
      </rect>
     </property>
     <property name="text">
-     <string>testhisto</string>
+     <string>historique</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="EXport_btn">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>0</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ExportJSON</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Chercher_btn">
+    <property name="geometry">
+     <rect>
+      <x>119</x>
+      <y>0</y>
+      <width>121</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ChercherContact</string>
     </property>
    </widget>
   </widget>
@@ -169,6 +195,9 @@
      <string>Option</string>
     </property>
     <addaction name="actionHistorique"/>
+    <addaction name="actionChercher_contact"/>
+    <addaction name="separator"/>
+    <addaction name="actionExport_JSON"/>
    </widget>
    <addaction name="menuOption"/>
   </widget>
@@ -176,6 +205,16 @@
   <action name="actionHistorique">
    <property name="text">
     <string>Historique</string>
+   </property>
+  </action>
+  <action name="actionChercher_contact">
+   <property name="text">
+    <string>Chercher contact</string>
+   </property>
+  </action>
+  <action name="actionExport_JSON">
+   <property name="text">
+    <string>Export JSON</string>
    </property>
   </action>
  </widget>

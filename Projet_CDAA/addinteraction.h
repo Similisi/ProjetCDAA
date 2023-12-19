@@ -6,6 +6,8 @@
 #include <QDebug>
 #include <QTextBlock>
 #include "gestioninteraction.h"
+#include <QDate>
+#include "interactionbdd.h"
 namespace Ui {
 class AddInteraction;
 }

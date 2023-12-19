@@ -1,11 +1,6 @@
 #include "addcontact.h"
 #include "ui_addcontact.h"
-#include <QMessageBox>
-#include <QDebug>
-#include <QDate>
-#include "contact.h"
-#include "date.h"
-#include "gestionnairecontact.h"
+
 AddContact::AddContact(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::AddContact)
@@ -41,9 +36,15 @@ void AddContact::on_AJoutBTN_clicked()
     dateContact->jour = ui->dateEdit->date().day();
     dateContact->mois = ui->dateEdit->date().month();
     dateContact->annee = ui->dateEdit->date().year();
+
     Contact *c = new Contact(nomContact,prenomContact,entrepriseContact,mailContact,telContact,photoContact,*dateContact);
+
+    ContactBDD *cb = new ContactBDD();
     GestionnaireContact* gs;
+
     gs->GetInstance()->addContact(c);
+
+    cb->AddContact(c);
     emit ajoutCont();
     ui->NomEdit->clear();
     ui->PrenomEdit->clear();

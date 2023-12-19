@@ -24,19 +24,21 @@ void AddInteraction::AjoutInteraction(){
         if (!c.isNull()){
             QString todo = "";
             QString date = "";
+            QDate datecourrant = QDate::currentDate();
             QString lignetodo = c.block().text();
+
             QStringList liste = lignetodo.split("@date");
             //qDebug() << "total : " <<c.block().text();
             if(liste.size() == 2){
-                //qDebug() << "taille = 2";
-                //qDebug() << "partie todo : " << liste.at(0).split("@todo").at(1);
-                //qDebug() << "partie date : " << liste.at(1);
                 todo = liste.at(0).split("@todo").at(1);
                 date = liste.at(1);
             }else if(liste.size() == 1){
-                //qDebug() << "taille = 1";
-                //qDebug() << "partie todo : " << liste.at(0).split("@todo").at(1);
                 todo = liste.at(0).split("@todo").at(1);
+                date = QString::number(datecourrant.day());
+                date += "/";
+                date += QString::number(datecourrant.month());
+                date += "/";
+                date += QString::number(datecourrant.year());
             }
             Tache *t = new Tache("");
             t->setToDo(todo.toStdString());
@@ -63,6 +65,9 @@ void AddInteraction::AjoutInteraction(){
     GestionInteraction *gi;
     //qDebug() << "fin2";
     gi->GetInstance()->addInteraction(i);
+    InteractionBdd* ib = new InteractionBdd();
+    qDebug() << "pbl : " << QString::fromStdString(this->contact->getNom()) << QString::fromStdString(this->contact->getPrenom());
+    ib->AddInteraction(i,this->contact);
     std::string test = this->contact->getNom();
     //qDebug() << "fin2.5 "+QString::fromStdString(test);
     gi->GetInstance()->addLienContactInteraction(i,this->contact);

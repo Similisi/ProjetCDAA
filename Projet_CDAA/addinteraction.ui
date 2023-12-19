@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Ajout Interaction</string>
   </property>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
@@ -85,7 +85,7 @@
     <rect>
      <x>20</x>
      <y>430</y>
-     <width>466</width>
+     <width>531</width>
      <height>80</height>
     </rect>
    </property>
@@ -93,14 +93,21 @@
     <item>
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>En cas d'ajout de date, veuillez mettre la date sous le format suivant : dd/mm/yyyy </string>
+       <string>En cas d'ajout de date, veuillez mettre la date sous le format suivant</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>dd/mm/yyyy </string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="label_2">
       <property name="text">
-       <string>Le cas echéant, la date ne sera pas pris en compte</string>
+       <string>Le cas echéant, la date sera la date du jour</string>
       </property>
      </widget>
     </item>
